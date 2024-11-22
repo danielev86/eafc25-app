@@ -1,0 +1,152 @@
+/* Impostazioni di base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Grigio scuro per uno sfondo moderno e pulito */
+    color: #fff; /* Testo bianco per contrasto */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffcd00; /* Colore giallo EA Sports per il titolo */
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ccc; /* Colore grigio chiaro per il testo */
+}
+
+/* Navbar */
+.nav {
+    background-color: #141414; /* Colore scuro per il menu */
+    border-bottom: 2px solid #ffcd00; /* Bordi inferiori gialli per il contrasto */
+    padding: 10px 0;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Per dare un tocco sportivo */
+    margin: 0 15px;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #ffcd00 !important; /* Colore giallo al passaggio del mouse */
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcd00;
+}
+
+.navbar {
+    padding: 10px 30px;
+}
+
+/* Bottoni */
+button {
+    background-color: #ffcd00;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    font-weight: bold;
+    border-radius: 30px; /* Angoli arrotondati */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800; /* Un giallo più scuro al passaggio del mouse */
+    cursor: pointer;
+}
+
+/* Contenuto principale */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+#content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Centrare il contenuto in modo elegante */
+h1, h2, p {
+    text-align: center;
+}
+
+/* Fondo delle pagine */
+.page-content {
+    background-color: #252525;
+    padding: 40px 20px;
+    border-radius: 15px;
+}
+
+/* Animazione di caricamento per le pagine */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Stile per i vari elementi quando sono selezionati */
+.active-page {
+    background-color: #ffcd00;
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+}
+
+/* Responsività per dispositivi mobili */
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-link {
+        font-size: 0.9rem;
+        margin: 0 8px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
