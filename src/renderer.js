@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const playerIssueLink = document.getElementById('playerIssueLink');
     const teamIssueLink = document.getElementById('teamIssueLink');
     const thirdPageLink = document.getElementById('thirdPageLink');
+    const managerIssueLink = document.getElementById('managerIssueLink');
     const contentDiv = document.getElementById('content');
 
     const playerIssueList = [ {
@@ -11,122 +12,122 @@ document.addEventListener('DOMContentLoaded', function() {
         "issue_description": "3 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "2",
+        "id": "3",
         "issue_type": "INFLUENZA",
         "issue_description": "7 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "3",
+        "id": "5",
         "issue_type": "VIRUS",
         "issue_description": "14 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "4",
+        "id": "7",
         "issue_type": "COVID-19",
         "issue_description": "21 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "6",
+        "id": "9",
         "issue_type": "GRAVE INFEZIONE VIRALE",
         "issue_description": "1 MESE FUORI PER INFORTUNEO"
        },
        {
-        "id": "7",
+        "id": "11",
         "issue_type": "CAVIGLIA SLOGATA",
         "issue_description": "20 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "8",
+        "id": "13",
         "issue_type": "STIRAMENTO ALLA CAVIGLIA",
         "issue_description": "14 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "9",
+        "id": "15",
         "issue_type": "CONTUSIONE AL PIEDE",
         "issue_description": "15 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "11",
+        "id": "17",
         "issue_type": "STIRAMENTO GINOCCHIO",
         "issue_description": "10 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "12",
+        "id": "19",
         "issue_type": "DISTORSIONE GINOCCHIO",
         "issue_description": "30 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "13",
+        "id": "21",
         "issue_type": "INFIAMMAZIONE ROTULA",
         "issue_description": "20 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "14",
+        "id": "23",
         "issue_type": "STRAPPO LEGAMENTO GINOCCHIO",
         "issue_description": "60 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "16",
+        "id": "25",
         "issue_type": "STIRAMENTO BICIPITE FEMORALE",
         "issue_description": "7 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "17",
+        "id": "27",
         "issue_type": "CONTUSIONE COSCIA",
         "issue_description": "5 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "18",
+        "id": "29",
         "issue_type": "STIRAMENTO MUSCOLO COSCIA",
         "issue_description": "14 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "19",
+        "id": "31",
         "issue_type": "STIRAMENTO INGUINE",
         "issue_description": "14 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "21",
+        "id": "33",
         "issue_type": "STRAPPO MUSCOLO INGUINE",
         "issue_description": "25 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "22",
+        "id": "35",
         "issue_type": "CONTUSIONE COSTOLA",
         "issue_description": "3 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "23",
+        "id": "37",
         "issue_type": "STIRAMENTO ALLA SCHIENA",
         "issue_description": "14 GIORNI FUORI PER INFORTUNEO"
        },
        {
-        "id": "24",
+        "id": "39",
         "issue_type": "SCANDALO SOCIAL",
         "issue_description": "15 GIORNI PER COMPORTAMENTO SCORRETTO"
        },
        {
-        "id": "26",
+        "id": "41",
         "issue_type": "CREDO IN TE",
         "issue_description": "SCHIERA TITOLARE UNO DEI PEGGIORI GIOCATORI DELLA ROSA"
        },
        {
-        "id": "27",
+        "id": "43",
         "issue_type": "RITARDO ALLENAMENTO",
         "issue_description": "7 GIORNI FUORI PER COMPORTAMENTO NON PROFESSIONALE"
        },
        {
-        "id": "28",
+        "id": "45",
         "issue_type": "BERE AL PARCO",
         "issue_description": "LICENZIA IL GIOCATORE PIU' FORTE E I DUE PIU' DEBOLI DEL VIVAIO"
        },
        {
-        "id": "29",
+        "id": "47",
         "issue_type": "QUANDO TOCCA A NOI",
         "issue_description": "SCHIERA LE RISERVE PER LA PROSSIMA PARTITA"
        },
        {
-        "id": "31",
+        "id": "49",
         "issue_type": "SQUALIFICA PER INGIURIA ARBITRO",
         "issue_description": "IL GIOCATORE E' SQUALIFICATO PER 2 PARTITE PER OFFESE ALL'ARBITRO"
        }];
@@ -195,6 +196,36 @@ document.addEventListener('DOMContentLoaded', function() {
          "id": "16",
          "issue_type": "COSTRUZIONE NUOVO STADIO",
          "issue_description": "RIDUZIONE 50% DEL BUDGET TRASFERIMENTI PER COSTUZIONE NUOVO STADIO"
+        }
+        ,
+        {
+         "id": "17",
+         "issue_type": "RISOLUZIONE DI UN CONTRATTO CON UNO SPONSOR IMPORTANTE",
+         "issue_description": "RIDUZIONE DEI RICAVI ANNUALI; NECESSITÀ DI CERCARE NUOVI SPONSOR IN TEMPI BREVI O VENDITA DEI DUE GIOCATORI PIU FORTI PER IL MERCATO"
+        }
+        ,
+        {
+         "id": "18",
+         "issue_type": "DECLINO IMPROVVISO DEI RICAVI DA BIGLIETTI",
+         "issue_description": "I FONDI PER IL CLUB DIVENTANO PIÙ RISTRETTI, CON UN IMPATTO NEGATIVO SULLE OPERAZIONI QUOTIDIANE, INCLUSI STIPENDI E TRASFERIMENTI."
+        }
+        ,
+        {
+         "id": "19",
+         "issue_type": "DIMINUZIONE DEI RICAVI DA DIRITTI TV",
+         "issue_description": "RIDUZIONE DEI RICAVI A LUNGO TERMINE, CON IL CLUB COSTRETTO A TAGLIARE ALTRE SPESE, INCLUSI GLI STIPENDI DEI GIOCATORI O GLI INVESTIMENTI IN NUOVE STRUTTURE. VENDI ALMENO 5 GIOCATORI"
+        }
+        ,
+        {
+         "id": "20",
+         "issue_type": "PROBLEMI FISCALI CON IL FISCO LOCALE",
+         "issue_description": "MULTA SOSTANZIOSA E POSSIBILE RIDUZIONE DELLE RISORSE DISPONIBILI PER ACQUISTI O INVESTIMENTI. VENDI PRIMA DI COMPRARE GIOCATORI CON ALMENO PAREGGIO DI BILANCIO O FINANZE IN ATTIVO"
+        }
+        ,
+        {
+         "id": "21",
+         "issue_type": "FALLIMENTO DI UN INVESTIMENTO IMMOBILIARE",
+         "issue_description": "AUMENTO DEL DEBITO O NECESSITÀ DI RISTRUTTURARE L'INIZIATIVA PER RECUPERARE LE PERDITE. VENDI 10 GIOCATORI"
         }
        ];
     const thirdPageList = [
@@ -378,8 +409,113 @@ document.addEventListener('DOMContentLoaded', function() {
             "issue_type": "Sono figlio di Attila Flagello di Dio!",
             "issue_description": "Acquista solo giocatori scandinavi"
            }
+           ,
+           {
+            "id": "40",
+            "issue_type": "Restrizioni sui Giocatori Stranieri (Limitazione di Giocatori Non-Nazionali)",
+            "issue_description": "Acquista solo 3 giocatori di nazionalita straniera"
+           }
 
     ];
+
+    const managerIssueList = [
+        {
+            "id": "1",
+            "issue_type": "SEMPER FIDELIS!",
+            "issue_description": "L'ALLENATORE PUO' RIMANERE UN ALTRO ANNO AL SUO POSTO"
+        }
+        ,
+        {
+            "id": "3",
+            "issue_type": "MY NAME IS ORONZO CANA!",
+            "issue_description": "SCEGLI UNA SQUADRA DI BASSA CLASSIFICA IN UNA QUALSIASI LEGA DI PRIMO LIVELLO"
+        }
+            ,
+        {
+            "id": "5",
+            "issue_type": "SARO' IL VOSTRO SALVATORE",
+            "issue_description": "SCEGLI UNA SQUADRA DI SERIE INFERIORE E PORTALA AL SUCCESSO"
+        }
+            ,
+        {
+            "id": "7",
+            "issue_type": "SO AMICO DER VICHINGO",
+            "issue_description": "SCEGLI UNA SQUADRA QUALSIASI DI UN CAMPIONATO SCANDINAVO"
+        }
+            ,
+        {
+            "id": "9",
+            "issue_type": "MI MANDA GIGINHO FRATELLO DI LECCE",
+            "issue_description": "SCEGLI UNA SQUADRA DI UN QUALSIASI CAMPIONATO SUDAMERICANO"
+        }
+            ,
+        {
+            "id": "11",
+            "issue_type": "SEI LICENZIATO!",
+            "issue_description": "IL PRESIDENTE DECIDE DI ESONERARTI. SCEGLI UN ALTRA SQUADRA DI PARI LIVELLO O LIVELLO INFERIORE"
+        }
+            ,
+        {
+            "id": "13",
+            "issue_type": "MAKE AMERICA GREAT AGAIN",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO AMERICANO"
+        }
+            ,
+        {
+            "id": "15",
+            "issue_type": "WIN THE BEST",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO OLTREMANICA"
+        }
+            ,
+        {
+            "id": "17",
+            "issue_type": "SO ER NIPOTE DEL TRAP",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO TEDESCO, AUSTRIACO O IRLANDESE"
+        }
+            ,
+        {
+            "id": "19",
+            "issue_type": "VAMOS A MATAR COMPANEROS",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO SPAGNOLO O PORTOGHESE"
+        }
+            ,
+        {
+            "id": "21",
+            "issue_type": "PARIGI O CARA",
+            "issue_description": "SEGLI UNA SQUADRA DEL CAMPIONATO FRANCESE"
+        }
+            ,
+        {
+            "id": "23",
+            "issue_type": "SO REGOLARE COME UN OROLOGIO",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO SVIZZERO"
+        }
+            ,
+        {
+            "id": "25",
+            "issue_type": "ME CHIAMANO MARCO POLO",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO AUSTRALIANO O ASIATICO"
+        }
+            ,
+        {
+            "id": "27",
+            "issue_type": "DEUS EX MACHINA",
+            "issue_description": "CREA UN TEAM IN UN CAMPIONATO QUALSIASI E PORTALO ALLA GLORIA"
+        }
+            ,
+        {
+            "id": "29",
+            "issue_type": "MAMMA LI TURCHI",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO OLANDESE"
+        }
+            ,
+        {
+            "id": "31",
+            "issue_type": "MI MANDA SCIFO",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO BELGA"
+        }
+    
+    ]
 
     function loadHomePage() {
         contentDiv.innerHTML = `
@@ -391,18 +527,48 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadPlayerIssuePage() {
         const button = document.createElement('button');
         button.innerText = 'Genera Player Issue';
+        const labelType = document.createElement('p');
         const label = document.createElement('p');
         const playerNumber = document.createElement('p');
         contentDiv.innerHTML = '';
         contentDiv.appendChild(button);
+        contentDiv.appendChild(labelType);
         contentDiv.appendChild(playerNumber);
         contentDiv.appendChild(label);
 
         button.addEventListener('click', () => {
-            const randomIndex = generateRandomValue(30);
-            playerNumber.innerText = 'Giocatore numero: ' +  generateRandomValue(18);
-            playerNumber.setAttribute('style', 'margin-top:10px;margin-bottom:0px;');
-            label.innerText = playerIssueList[randomIndex].issue_description;
+            const randomIndex = generateRandomValue(49);
+            if (isModByTwo(randomIndex)){
+                playerNumber.innerText = '';
+                labelType.innerText = '';
+                label.innerText = 'Nessun imprevisto generato!';
+            }else{
+                labelType.innerText = playerIssueList[randomIndex].issue_type;
+                playerNumber.innerText = 'Giocatore numero: ' +  generateRandomValue(18);
+                playerNumber.setAttribute('style', 'margin-top:10px;margin-bottom:0px;');
+                label.innerText = playerIssueList[randomIndex].issue_description;
+            }
+        });
+    }
+
+    function loadManagerIssuePage(){
+        const btn = document.createElement('button');
+        btn.innerText = 'Genera Manager Issue';
+        const label = document.createElement('p');
+        const labelType = document.createElement('p');
+        contentDiv.innerHTML = '';
+        contentDiv.appendChild(btn);
+        contentDiv.appendChild(labelType);
+        contentDiv.appendChild(label);
+        btn.addEventListener('click', () =>{
+            const randomIndex = generateRandomValue(16);
+            if (isModByTwo(randomIndex)) {
+                labelType.innerText = '';
+                label.innerText = 'Nessun imprevisto generato!';
+            }else{
+                labelType.innerText = managerIssueList[randomIndex].issue_type;
+                label.innerText = managerIssueList[randomIndex].issue_description;
+            }
         });
     }
 
@@ -410,12 +576,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const button = document.createElement('button');
         button.innerText = 'Genera Team Issue';
         const label = document.createElement('p');
+        const labelType = document.createElement('p');
         contentDiv.innerHTML = '';
         contentDiv.appendChild(button);
+        contentDiv.appendChild(labelType);
         contentDiv.appendChild(label);
 
         button.addEventListener('click', () => {
             const randomIndex = generateRandomValue(16);
+            labelType.innerText = teamIssueList[randomIndex].issue_type;
             label.innerText = teamIssueList[randomIndex].issue_description;
         });
     }
@@ -424,12 +593,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const button = document.createElement('button');
         button.innerText = 'Genera Market Issue';
         const label = document.createElement('p');
+        const labelType = document.createElement('p');
         contentDiv.innerHTML = '';
         contentDiv.appendChild(button);
+        contentDiv.appendChild(labelType);
         contentDiv.appendChild(label);
 
         button.addEventListener('click', () => {
             const randomIndex = generateRandomValue(39);
+            label.labelType = thirdPageList[randomIndex].issue_type;
             label.innerText = thirdPageList[randomIndex].issue_description;
         });
     }
@@ -438,10 +610,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return Math. floor(Math. random()*value) + 1;
     }
 
+    function isModByTwo(num) {
+        return num % 2 === 0;
+    }
+
     homeLink.addEventListener('click', loadHomePage);
     playerIssueLink.addEventListener('click', loadPlayerIssuePage);
     teamIssueLink.addEventListener('click', loadTeamIssuePage);
     thirdPageLink.addEventListener('click', loadThirdPage);
+    managerIssueLink.addEventListener('click', loadManagerIssuePage);
 
     // Carica la Home page inizialmente
     loadHomePage();

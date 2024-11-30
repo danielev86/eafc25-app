@@ -29,12 +29,12 @@ p {
 .nav {
     background-color: #141414; /* Colore scuro per il menu */
     border-bottom: 2px solid #ffcd00; /* Bordi inferiori gialli per il contrasto */
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .nav-link {
     color: #fff !important;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: 600;
     text-transform: uppercase; /* Per dare un tocco sportivo */
     margin: 0 15px;
