@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const teamIssueLink = document.getElementById('teamIssueLink');
     const thirdPageLink = document.getElementById('thirdPageLink');
     const managerIssueLink = document.getElementById('managerIssueLink');
+    const eafcSliderIssueLink = document.getElementById('eafcSliderIssueLink');
+
     const contentDiv = document.getElementById('content');
 
     const playerIssueList = [ {
@@ -517,6 +519,133 @@ document.addEventListener('DOMContentLoaded', function() {
     
     ]
 
+    const slidereafc = [
+  {
+    "Parametro": "Velocità scatto",
+    "Utente Esperto": 30,
+    "CPU Esperto": 31,
+    "Utente Campione": 31,
+    "CPU Campione": 30
+  },
+  {
+    "Parametro": "Accelerazione",
+    "Utente Esperto": 50,
+    "CPU Esperto": 51,
+    "Utente Campione": 51,
+    "CPU Campione": 50
+  },
+  {
+    "Parametro": "Errore tiri",
+    "Utente Esperto": 60,
+    "CPU Esperto": 60,
+    "Utente Campione": 59,
+    "CPU Campione": 60
+  },
+  {
+    "Parametro": "Errore passaggi",
+    "Utente Esperto": 60,
+    "CPU Esperto": 60,
+    "Utente Campione": 59,
+    "CPU Campione": 60
+  },
+  {
+    "Parametro": "Velocità tiri",
+    "Utente Esperto": 47,
+    "CPU Esperto": 47,
+    "Utente Campione": 48,
+    "CPU Campione": 47
+  },
+  {
+    "Parametro": "Velocità passaggi",
+    "Utente Esperto": 40,
+    "CPU Esperto": 40,
+    "Utente Campione": 41,
+    "CPU Campione": 40
+  },
+  {
+    "Parametro": "Frequenza infortuni",
+    "Utente Esperto": 70,
+    "CPU Esperto": 70,
+    "Utente Campione": 70,
+    "CPU Campione": 70
+  },
+  {
+    "Parametro": "Severità infortuni",
+    "Utente Esperto": 30,
+    "CPU Esperto": 30,
+    "Utente Campione": 30,
+    "CPU Campione": 30
+  },
+  {
+    "Parametro": "Abilità GK (portiere)",
+    "Utente Esperto": 55,
+    "CPU Esperto": 55,
+    "Utente Campione": 55,
+    "CPU Campione": 55
+  },
+  {
+    "Parametro": "Marcatura",
+    "Utente Esperto": 70,
+    "CPU Esperto": 70,
+    "Utente Campione": 70,
+    "CPU Campione": 70
+  },
+  {
+    "Parametro": "Frequenza inserimenti",
+    "Utente Esperto": 45,
+    "CPU Esperto": 45,
+    "Utente Campione": 45,
+    "CPU Campione": 45
+  },
+  {
+    "Parametro": "Altezza difesa",
+    "Utente Esperto": 55,
+    "CPU Esperto": 55,
+    "Utente Campione": 55,
+    "CPU Campione": 55
+  },
+  {
+    "Parametro": "Lunghezza difesa",
+    "Utente Esperto": 40,
+    "CPU Esperto": 40,
+    "Utente Campione": 40,
+    "CPU Campione": 40
+  },
+  {
+    "Parametro": "Ampiezza difesa",
+    "Utente Esperto": 50,
+    "CPU Esperto": 50,
+    "Utente Campione": 50,
+    "CPU Campione": 50
+  },
+  {
+    "Parametro": "Posizione esterni",
+    "Utente Esperto": 45,
+    "CPU Esperto": 45,
+    "Utente Campione": 45,
+    "CPU Campione": 45
+  },
+  {
+    "Parametro": "Errore controllo",
+    "Utente Esperto": 50,
+    "CPU Esperto": 50,
+    "Utente Campione": 50,
+    "CPU Campione": 50
+  }
+];
+
+const cursori = [
+  { "CURSORI": "AGGRESSIVITA CONTRASTI", "valore": 69 },
+  { "CURSORI": "VELOCITA MANOVRA", "valore": 97 },
+  { "CURSORI": "FREQUENZA TIRI", "valore": 72 },
+  { "CURSORI": "FREQUENZA PASSAGI PRIMA", "valore": 92 },
+  { "CURSORI": "FREQUENZA CROSS", "valore": 68 },
+  { "CURSORI": "FREQUENZA DRIBBLING", "valore": 44 },
+  { "CURSORI": "FREQUENZA MOSSE", "valore": 30 }
+];
+
+
+
     function loadHomePage() {
         contentDiv.innerHTML = `
             <h2>Benvenuto in EA SPORTS FC 25 Issue Generator!</h2>
@@ -606,6 +735,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function loadEaFcSliderPage() {
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = '';  // Pulisce il contenuto esistente
+
+        // --- Prima tabella dinamica con slidereafc ---
+        const table1 = document.createElement('table');
+        table1.className = 'styled-table';
+        
+        // Header 1
+        const thead1 = document.createElement('thead');
+        const headerRow1 = document.createElement('tr');
+        const headers1 = Object.keys(slidereafc[0]);
+        headers1.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow1.appendChild(th);
+        });
+        thead1.appendChild(headerRow1);
+        table1.appendChild(thead1);
+
+        // Body 1
+        const tbody1 = document.createElement('tbody');
+        slidereafc.forEach(rowData => {
+            const tr = document.createElement('tr');
+            headers1.forEach(header => {
+                const td = document.createElement('td');
+                td.textContent = rowData[header];
+                tr.appendChild(td);
+            });
+            tbody1.appendChild(tr);
+        });
+        table1.appendChild(tbody1);
+
+        contentDiv.appendChild(table1);
+
+        // --- Nuova tabella CURSORI sotto la prima ---
+        const table2 = document.createElement('table');
+        table2.className = 'styled-table cursori-table';
+
+        // Header 2
+        const thead2 = document.createElement('thead');
+        const headerRow2 = document.createElement('tr');
+        ['CURSORI', 'valore'].forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow2.appendChild(th);
+        });
+        thead2.appendChild(headerRow2);
+        table2.appendChild(thead2);
+
+        // Body 2
+        const tbody2 = document.createElement('tbody');
+        cursori.forEach(rowData => {
+            const tr = document.createElement('tr');
+            ['CURSORI', 'valore'].forEach(key => {
+                const td = document.createElement('td');
+                td.textContent = rowData[key];
+                tr.appendChild(td);
+            });
+            tbody2.appendChild(tr);
+        });
+        table2.appendChild(tbody2);
+
+        contentDiv.appendChild(table2);
+    }
+
     function generateRandomValue(value){
         return Math. floor(Math. random()*value) + 1;
     }
@@ -619,6 +814,7 @@ document.addEventListener('DOMContentLoaded', function() {
     teamIssueLink.addEventListener('click', loadTeamIssuePage);
     thirdPageLink.addEventListener('click', loadThirdPage);
     managerIssueLink.addEventListener('click', loadManagerIssuePage);
+    eafcSliderIssueLink.addEventListener('click', loadEaFcSliderPage);
 
     // Carica la Home page inizialmente
     loadHomePage();

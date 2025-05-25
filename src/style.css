@@ -150,3 +150,54 @@ h1, h2, p {
         font-size: 1rem;
     }
 }
+
+/* Tabelle con stile EA Sports FC */
+
+.styled-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #252525; /* sfondo tabella scuro */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.styled-table thead tr {
+    background-color: black;
+    color: #ffcd00; /* giallo EA Sports */
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-bottom: 3px solid #ffcd00;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #333;
+    cursor: default;
+}
+
+/* Specifica per la tabella cursori, più stretta */
+.cursori-table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
