@@ -667,15 +667,18 @@ const cursori = [
 
         button.addEventListener('click', () => {
             const randomIndex = generateRandomValue(49);
+			console.log(randomIndex);
             if (isModByTwo(randomIndex)){
                 playerNumber.innerText = '';
                 labelType.innerText = '';
                 label.innerText = 'Nessun imprevisto generato!';
             }else{
-                labelType.innerText = playerIssueList[randomIndex].issue_type;
+				let playerInfo = trovaElementoPerId(playerIssueList, randomIndex);
+				console.log(playerInfo);
+                labelType.innerText = playerInfo.issue_type;
                 playerNumber.innerText = 'Giocatore numero: ' +  generateRandomValue(18);
                 playerNumber.setAttribute('style', 'margin-top:10px;margin-bottom:0px;');
-                label.innerText = playerIssueList[randomIndex].issue_description;
+                label.innerText = playerInfo.issue_description;
             }
         });
     }
@@ -808,6 +811,11 @@ const cursori = [
     function isModByTwo(num) {
         return num % 2 === 0;
     }
+	
+	function trovaElementoPerId(lista, idCercato) {
+	  const idCercatoString = String(idCercato);
+	  return lista.find(item => item.id === idCercatoString);
+	}
 
     homeLink.addEventListener('click', loadHomePage);
     playerIssueLink.addEventListener('click', loadPlayerIssuePage);
