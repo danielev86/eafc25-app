@@ -515,7 +515,30 @@ document.addEventListener('DOMContentLoaded', function() {
             "id": "31",
             "issue_type": "MI MANDA SCIFO",
             "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO BELGA"
-        }
+        }	,
+		{
+			"id": "33",
+            "issue_type": "OCCHIO ALLA PERESTROJKA",
+            "issue_description": "SCEGLI UNA SQUADRA DI UN CAMPIONATO DELL?EST EUROPA"
+		}
+			,
+		{
+			"id": "35",
+            "issue_type": "OPERAZIONE BARBAROSSA",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO RUSSO"
+		}	
+			,
+		{
+			"id": "37",
+            "issue_type": "ALLA CONQUISTA DELLA DACIA",
+            "issue_description": "SCEGLI UNA SQUADRA DEL CAMPIONATO ROMENO"
+		}	
+			,
+		{
+			"id": "39",
+            "issue_type": "STA PREPARANDO QUALCHE AZIONE SUI BALCONI...SUI BALCANI",
+            "issue_description": "SCEGLI UNA SQUADRA DELL'AREA BALCANICA"
+		}		
     
     ]
 
@@ -693,13 +716,14 @@ const cursori = [
         contentDiv.appendChild(labelType);
         contentDiv.appendChild(label);
         btn.addEventListener('click', () =>{
-            const randomIndex = generateRandomValue(16);
+            const randomIndex = generateRandomValue(39);
             if (isModByTwo(randomIndex)) {
                 labelType.innerText = '';
                 label.innerText = 'Nessun imprevisto generato!';
             }else{
-                labelType.innerText = managerIssueList[randomIndex].issue_type;
-                label.innerText = managerIssueList[randomIndex].issue_description;
+				let managerInfo = trovaElementoPerId(managerIssueList, randomIndex);
+                labelType.innerText = managerInfo.issue_type;
+                label.innerText = managerInfo.issue_description;
             }
         });
     }

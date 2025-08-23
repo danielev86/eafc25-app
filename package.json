@@ -4,13 +4,13 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-      "start": "electron ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^5.3.3",
-    "electron": "^33.2.0"
+    "electron": "^33.2.1"
   }
 }
