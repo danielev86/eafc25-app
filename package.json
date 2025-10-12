@@ -1,16 +1,40 @@
 {
-  "name": "fc25-issue-app",
+  "name": "fc26-issue-app",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^5.3.3",
-    "electron": "^33.2.1"
+    "electron": "^33.4.11",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "build": {
+    "appId": "com.developwithhomer",
+    "productName": "EAFC-Issue",
+    "directories": {
+      "output": "dist"
+    },
+	"files": [
+	  "main.js",
+	  "preload.js",
+	  "src/**/*",
+	  "package.json"
+	],
+  "extraResources": [
+    { "from": "db/eafc_issues.db", "to": "db/eafc_issues.db" }
+  ],
+    "win": {
+		"target": ["dir"]
+    }
   }
 }

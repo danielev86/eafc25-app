@@ -1,203 +1,137 @@
-/* Impostazioni di base */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Grigio scuro per uno sfondo moderno e pulito */
-    color: #fff; /* Testo bianco per contrasto */
-    margin: 0;
-    padding: 0;
+/* =========================================
+   STILE EA SPORTS FC 26 - VERSIONE NO GIALLO
+   ========================================= */
+
+/* PALETTE DI COLORI */
+:root {
+    --fc-yellow: #ffcd00;
+    --fc-gold: #f5d35c;
+    --fc-dark: #0b0b0d;
+    --fc-gray: #1a1a1a;
+    --fc-lightgray: #cfcfcf;
+    --fc-accent: #00ffc8; /* Neon verde-acqua */
+    --fc-accent-dark: #00c7a1;
+    --fc-white: #f5f5f5;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #ffcd00; /* Colore giallo EA Sports per il titolo */
-    font-weight: 700;
+/* BASE */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: radial-gradient(circle at top right, #121212, #000);
+    color: var(--fc-lightgray);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* TITOLI */
+h1, h2 {
+    font-family: 'Segoe UI Semibold', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
     letter-spacing: 2px;
 }
 
+/* h1 - Verde acqua neon EA FC */
+h1 {
+    font-size: 3.2rem;
+    color: var(--fc-accent);
+    text-shadow: 0 0 10px rgba(0, 255, 200, 0.6),
+                 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+/* h2 - Bianco lucido */
 h2 {
     font-size: 2rem;
-    color: #fff;
-    font-weight: 600;
+    color: var(--fc-white);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+/* PARAGRAFI */
 p {
-    font-size: 1.2rem;
-    color: #ccc; /* Colore grigio chiaro per il testo */
+    font-size: 1.1rem;
+    color: #d0d0d0;
+    text-align: center;
 }
 
-/* Navbar */
-.nav {
-    background-color: #141414; /* Colore scuro per il menu */
-    border-bottom: 2px solid #ffcd00; /* Bordi inferiori gialli per il contrasto */
-    padding: 5px 0;
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg, #0d0d0f, #141414);
+    border-bottom: 3px solid var(--fc-accent);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.navbar-brand {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--fc-accent);
+    text-shadow: 0 0 10px rgba(0,255,200,0.5);
 }
 
 .nav-link {
     color: #fff !important;
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase; /* Per dare un tocco sportivo */
+    text-transform: uppercase;
     margin: 0 15px;
     letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--fc-accent);
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #ffcd00 !important; /* Colore giallo al passaggio del mouse */
-    text-decoration: none;
+    color: var(--fc-accent) !important;
 }
 
-.navbar-brand {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffcd00;
+.nav-link:hover::after {
+    width: 100%;
 }
 
-.navbar {
-    padding: 10px 30px;
-}
-
-/* Bottoni */
+/* BOTTONI - Verde acqua neon */
 button {
-    background-color: #ffcd00;
+    background: linear-gradient(90deg, var(--fc-accent), var(--fc-accent-dark));
     border: none;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    color: #1a1a1a;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: #000;
     font-weight: bold;
-    border-radius: 30px; /* Angoli arrotondati */
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,255,200,0.4);
 }
 
 button:hover {
-    background-color: #e6b800; /* Un giallo più scuro al passaggio del mouse */
-    cursor: pointer;
+    background: var(--fc-white);
+    color: #111;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
 }
 
-/* Contenuto principale */
+/* CONTENUTO PRINCIPALE */
 .container {
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 60px auto;
     padding: 0 20px;
 }
 
-#content {
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* Centrare il contenuto in modo elegante */
-h1, h2, p {
-    text-align: center;
-}
-
-/* Fondo delle pagine */
 .page-content {
-    background-color: #252525;
-    padding: 40px 20px;
-    border-radius: 15px;
-}
-
-/* Animazione di caricamento per le pagine */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.page-content {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Stile per i vari elementi quando sono selezionati */
-.active-page {
-    background-color: #ffcd00;
-    color: #1a1a1a;
-    border-radius: 10px;
-    padding: 10px;
-    font-weight: 700;
-}
-
-/* Responsività per dispositivi mobili */
-@media (max-width: 768px) {
-    .nav-link {
-        font-size: 1rem;
-        margin: 0 10px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .nav-link {
-        font-size: 0.9rem;
-        margin: 0 8px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    button {
-        font-size: 1rem;
-    }
-}
-
-/* Tabelle con stile EA Sports FC */
-
-.styled-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    margin: 20px 0;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background-color: #252525; /* sfondo tabella scuro */
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-}
-
-.styled-table thead tr {
-    background-color: black;
-    color: #ffcd00; /* giallo EA Sports */
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-bottom: 3px solid #ffcd00;
-}
-
-.styled-table th,
-.styled-table td {
-    padding: 12px 15px;
-    text-align: center;
-}
-
-.styled-table tbody tr {
-    background-color: #1a1a1a;
-    border-radius: 8px;
-}
-
-.styled-table tbody tr:nth-child(even) {
-    background-color: #222;
-}
-
-.styled-table tbody tr:hover {
-    background-color: #333;
-    cursor: default;
-}
-
-/* Specifica per la tabella cursori, più stretta */
-.cursori-table {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
+    background: linear-gradient(180deg, #1a1a1a, #111);
+    padding: 40px 25px
