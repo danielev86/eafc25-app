@@ -135,3 +135,40 @@ button:hover {
 .page-content {
     background: linear-gradient(180deg, #1a1a1a, #111);
     padding: 40px 25px
+}
+
+/* Stile Neon per le tabelle */
+.table-neon {
+    border: 2px solid var(--fc-accent);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-neon:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 35px rgba(0, 255, 200, 0.7);
+}
+
+/* Allinea la prima colonna a sinistra */
+.table-neon th:first-child,
+.table-neon td:first-child {
+    text-align: left;
+    padding-left: 15px; /* un po' di padding per leggibilità */
+}
+
+.table-neon th,
+.table-neon td {
+    border: 1px solid rgba(0, 255, 200, 0.3) !important;
+}
+
+.table-neon th {
+    background-color: rgba(0, 255, 200, 0.2);
+    color: var(--fc-white);
+    text-shadow: 0 0 5px rgba(0, 255, 200, 0.7);
+}
+
+.table-neon td {
+    color: var(--fc-lightgray);
+}

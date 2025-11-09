@@ -135,9 +135,73 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Slider Page (static) ---
-  function loadEaFcSliderPage() {
-    contentDiv.innerHTML = `<p>Slider FC qui...</p>`;
-  }
+function loadEaFcSliderPage() {
+  contentDiv.innerHTML = `
+    <h2>Slider EA FC 26</h2>
+
+    <!-- Prima Tabella: Utente vs CPU -->
+    <div class="table-responsive mb-5">
+      <table class="table table-dark table-striped table-bordered text-center table-neon">
+        <thead>
+          <tr>
+            <th>Parametro</th>
+            <th>Utente</th>
+            <th>CPU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Velocita scatto</td><td>35</td><td>36</td></tr>
+          <tr><td>Accelerazione</td><td>45</td><td>46</td></tr>
+          <tr><td>Errore tiri</td><td>60</td><td>50</td></tr>
+          <tr><td>Velocita tiri</td><td>48</td><td>48</td></tr>
+          <tr><td>Errore conclusioni di testa</td><td>50</td><td>20</td></tr>
+          <tr><td>Errore passaggi</td><td>60</td><td>55</td></tr>
+          <tr><td>Velocita passaggi</td><td>40</td><td>40</td></tr>
+          <tr><td>Errore passaggi di testa</td><td>60</td><td>55</td></tr>
+          <tr><td>Frequenza infortuni</td><td>70</td><td>70</td></tr>
+          <tr><td>Gravita infortuni</td><td>30</td><td>30</td></tr>
+          <tr><td>Abilita portiere</td><td>55</td><td>80</td></tr>
+          <tr><td>Piazzamento marcatura</td><td>65</td><td>65</td></tr>
+          <tr><td>Piazzamento frequenza inserimenti</td><td>40</td><td>40</td></tr>
+          <tr><td>Piazzamento altezza difesa</td><td>55</td><td>55</td></tr>
+          <tr><td>Piazzamento lunghezza difesa</td><td>30</td><td>30</td></tr>
+          <tr><td>Piazzamento ampiezza difesa</td><td>55</td><td>55</td></tr>
+          <tr><td>Piazzamento posizione esterni</td><td>70</td><td>70</td></tr>
+          <tr><td>Errore controllo tocco di prima</td><td>80</td><td>60</td></tr>
+          <tr><td>Errore intercettazioni</td><td>85</td><td>90</td></tr>
+          <tr><td>Errore palloni respinti</td><td>90</td><td>90</td></tr>
+          <tr><td>Aiuto contrasti</td><td>50</td><td>40</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- Titolo Seconda Tabella -->
+    <h3 class="text-center mb-3" style="color: var(--fc-accent); text-shadow: 0 0 10px rgba(0,255,200,0.6);">Cursori CPU</h3>
+
+
+    <!-- Seconda Tabella: Cursori CPU -->
+    <div class="table-responsive">
+      <table class="table table-dark table-striped table-bordered text-center table-neon">
+        <thead>
+          <tr>
+            <th>Parametro</th>
+            <th>CPU</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Aggressivita contrasti</td><td>85</td></tr>
+          <tr><td>Velocita costruzione manovra</td><td>50</td></tr>
+          <tr><td>Frequenza tiri</td><td>55</td></tr>
+          <tr><td>Frequenza passaggi di prima</td><td>35</td></tr>
+          <tr><td>Frequenza cross</td><td>90</td></tr>
+          <tr><td>Frequenza dribbling</td><td>30</td></tr>
+          <tr><td>Frequenza mosse abilita</td><td>60</td></tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+}
 
   // --- Eventi di navigazione ---
   homeLink.addEventListener('click', loadHomePage);
