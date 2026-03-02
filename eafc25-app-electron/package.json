@@ -24,17 +24,22 @@
     "directories": {
       "output": "dist"
     },
-	"files": [
-	  "main.js",
-	  "preload.js",
-	  "src/**/*",
-	  "package.json"
-	],
-  "extraResources": [
-    { "from": "db/eafc_issues.db", "to": "db/eafc_issues.db" }
-  ],
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "db/eafc_issues.db",
+        "to": "db/eafc_issues.db"
+      }
+    ],
     "win": {
-		"target": ["dir"]
+      "target": [
+        "dir"
+      ]
     }
   }
 }
