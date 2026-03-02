@@ -75,7 +75,19 @@ public class MainView extends BorderPane {
         Supplier<Node> factory = viewFactories.get(view);
         if (factory == null) return;
 
-        Node freshView = factory.get(); // view nuova => stato iniziale garantito
-        content.getChildren().setAll(freshView);
+        try {
+            Node freshView = factory.get(); // view nuova => stato iniziale garantito
+            content.getChildren().setAll(freshView);
+        } catch (Throwable ex) {
+            ex.printStackTrace(); // IMPORTANTISSIMO: guarda la console di IntelliJ
+
+            Label err = new Label("ERROR OPENING " + view + ":\n" +
+                    ex.getClass().getSimpleName() + ": " + (ex.getMessage() == null ? "" : ex.getMessage()));
+            err.setWrapText(true);
+            err.setMaxWidth(900);
+            err.getStyleClass().add("result-desc");
+
+            content.getChildren().setAll(err);
+        }
     }
 }
