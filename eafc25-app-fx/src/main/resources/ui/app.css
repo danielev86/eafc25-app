@@ -1,0 +1,306 @@
+/* ===== Base font globale ===== */
+.root {
+    -fx-font-size: 16px;           /* era troppo piccolo */
+    -fx-font-family: "Segoe UI", "Inter", "Arial";
+}
+
+/* Background */
+.app-root {
+    -fx-background-color: #07080c;
+}
+
+/* Top wrapper (header + nav) */
+.top-wrap {
+    -fx-background-color: #07080c;
+    -fx-border-color: rgba(255,255,255,0.06);
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Header */
+.header {
+    -fx-padding: 6 0 0 0;
+}
+
+.app-title {
+    -fx-font-size: 36px;           /* più grande */
+    -fx-font-weight: 900;
+    -fx-text-fill: #e9f3ff;
+    -fx-effect: dropshadow(gaussian, rgba(140,255,0,0.18), 18, 0.25, 0, 0);
+}
+
+.app-subtitle {
+    -fx-text-fill: rgba(233,243,255,0.70);  /* più visibile */
+    -fx-font-size: 14px;
+}
+
+/* Nav container centered */
+.nav {
+    -fx-background-color: transparent;
+}
+
+.nav-centered {
+    -fx-padding: 10 0 0 0;
+}
+
+/* Nav buttons */
+.nav-btn {
+    -fx-font-size: 14px;
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-text-fill: rgba(233,243,255,0.85);
+    -fx-font-weight: 900;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: rgba(255,255,255,0.12);
+    -fx-border-width: 1;
+    -fx-padding: 12 16 12 16;
+    -fx-cursor: hand;
+}
+
+.nav-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.10);
+    -fx-border-color: rgba(140,255,0,0.35);
+}
+
+.nav-btn.active {
+    -fx-background-color: rgba(140,255,0,0.18);
+    -fx-border-color: rgba(140,255,0,0.55);
+    -fx-text-fill: #eaffd1;
+}
+
+/* Center content container */
+.container {
+    -fx-background-color: transparent;
+}
+
+.content-wrap {
+    -fx-background-color: transparent;
+}
+
+/* Pages */
+.page {
+    -fx-background-color: rgba(255,255,255,0.05);   /* più chiaro = meno “tutto scuro” */
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: rgba(255,255,255,0.10);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 18, 0.25, 0, 6);
+    -fx-padding: 26 22 26 22;
+    -fx-min-width: 860px;   /* un filo più largo */
+    -fx-max-width: 860px;
+}
+
+/* Page title */
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #e9f3ff;
+}
+
+/* CTA button */
+.cta-btn {
+    -fx-font-size: 16px;
+    -fx-background-color: linear-gradient(to right, rgba(140,255,0,0.95), rgba(0,255,200,0.90));
+    -fx-text-fill: #05060a;
+    -fx-font-weight: 900;
+    -fx-background-radius: 14px;
+    -fx-padding: 14 30 14 30;
+    -fx-cursor: hand;
+}
+
+.cta-btn:hover {
+    -fx-effect: dropshadow(gaussian, rgba(140,255,0,0.22), 20, 0.25, 0, 0);
+}
+
+/* Results (centered, bold) */
+.result-type {
+    -fx-text-fill: #eaffd1;
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+    -fx-padding: 14 0 0 0;
+}
+
+.result-desc {
+    -fx-text-fill: rgba(233,243,255,0.92);
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-padding: 8 0 0 0;
+}
+
+.result-extra {
+    -fx-text-fill: rgba(233,243,255,0.65);
+    -fx-font-size: 14px;
+    -fx-padding: 12 0 0 0;
+}
+
+/* Home specific */
+.home-lead {
+    -fx-text-fill: rgba(233,243,255,0.92);
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+}
+
+.home-muted {
+    -fx-text-fill: rgba(233,243,255,0.70);
+    -fx-font-size: 15px;
+}
+
+.text-field, .text-area, .combo-box, .spinner {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-text-fill: rgba(233,243,255,0.92);
+    -fx-prompt-text-fill: rgba(233,243,255,0.45);
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: rgba(255,255,255,0.12);
+    -fx-border-width: 1;
+    -fx-padding: 10 12 10 12;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* ===== ComboBox fix ===== */
+
+.combo-box {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-text-fill: rgba(233,243,255,0.92);
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: rgba(255,255,255,0.15);
+    -fx-border-width: 1;
+    -fx-padding: 8 12 8 12;
+}
+
+/* Area visibile della combo */
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(233,243,255,0.92);
+    -fx-font-size: 14px;
+}
+
+/* Freccia */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* Dropdown popup */
+.combo-box-popup .list-view {
+    -fx-background-color: #11131a;
+    -fx-border-color: rgba(255,255,255,0.12);
+    -fx-border-width: 1;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+}
+
+/* Celle del dropdown */
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgba(233,243,255,0.92);
+    -fx-padding: 10 14 10 14;
+}
+
+/* Hover item */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(140,255,0,0.15);
+}
+
+/* Item selezionato */
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: rgba(140,255,0,0.25);
+    -fx-text-fill: #eaffd1;
+}
+
+/* ===== Formation: ComboBox bianca ===== */
+.formation-combo {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: rgba(0,0,0,0.18);
+    -fx-border-width: 1;
+    -fx-padding: 8 12 8 12;
+}
+
+.formation-combo .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #101318;
+    -fx-font-weight: 800;
+}
+
+/* Freccia */
+.formation-combo .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* Popup dropdown (bianco) */
+.formation-combo .combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: rgba(0,0,0,0.18);
+    -fx-border-width: 1;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+}
+
+.formation-combo .combo-box-popup .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #101318;
+    -fx-padding: 10 14 10 14;
+}
+
+.formation-combo .combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(0,0,0,0.06);
+}
+
+.formation-combo .combo-box-popup .list-cell:selected {
+    -fx-background-color: rgba(0,0,0,0.10);
+    -fx-text-fill: #101318;
+}
+
+/* ===== Pitch verde ===== */
+.pitch-bg {
+    /* verde prato con leggera diagonale */
+    -fx-fill: linear-gradient(to bottom right, #0f6d2b, #0b4f1f);
+}
+
+.pitch-line {
+    -fx-stroke: rgba(255,255,255,0.55);
+    -fx-stroke-width: 2;
+}
+
+.pitch-circle {
+    -fx-fill: transparent;
+    -fx-stroke: rgba(255,255,255,0.55);
+    -fx-stroke-width: 2;
+}
+
+/* Pallini: bianchi e selezione giallo/verde */
+.player-dot {
+    -fx-fill: rgba(255,255,255,0.95);
+    -fx-stroke: rgba(0,0,0,0.25);
+    -fx-stroke-width: 2;
+}
+
+.player-label {
+    -fx-text-fill: #0b0e14;
+    -fx-font-weight: 900;
+    -fx-font-size: 11px;
+}
+
+.selected-player .player-dot {
+    -fx-fill: #ffe84d; /* giallo evidenza */
+    -fx-stroke: rgba(0,0,0,0.25);
+    -fx-effect: dropshadow(gaussian, rgba(255,232,77,0.35), 18, 0.30, 0, 0);
+}
+/* Linee campo complete */
+.pitch-outline, .pitch-box, .pitch-goal {
+    -fx-stroke: rgba(255,255,255,0.65);
+    -fx-stroke-width: 2;
+}
+
+.pitch-arc {
+    -fx-stroke: rgba(255,255,255,0.65);
+    -fx-stroke-width: 2;
+}
+
+.pitch-spot {
+    -fx-fill: rgba(255,255,255,0.75);
+}
