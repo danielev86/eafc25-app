@@ -1,5 +1,6 @@
 package com.redcatdev86.ui.view;
 
+import com.redcatdev86.backend.model.IssueType;
 import com.redcatdev86.service.IssueService;
 import com.redcatdev86.service.RandomIssueService;
 import com.redcatdev86.ui.bean.IssueBean;
@@ -9,28 +10,17 @@ import java.util.Optional;
 
 public class PlayerIssueView extends IssuePageBase {
 
-    private final RandomIssueService random;
-
-    public PlayerIssueView(IssueService issueService, RandomIssueService random) {
+    public PlayerIssueView(IssueService issueService) {
         super("PLAYER ISSUE");
-        this.random = random;
 
         bindGenerate(() -> {
             try {
-                Optional<IssueBean> opt = random.randomPlayerIssueLikeElectron();
-                int playerNumber = random.randomPlayerNumber();
-
-                // Extra sempre sotto
-                if (opt.isPresent()) {
-                    resultExtra.setText(buildExtra(opt.get()) + " • PLAYER #" + playerNumber);
-                } else {
-                    resultExtra.setText("PLAYER #" + playerNumber);
-                }
+                Optional<IssueBean> opt = issueService.randomPlayerIssue();
                 return opt;
 
             } catch (SQLException ex) {
                 throw new RuntimeException("Errore DB: " + ex.getMessage(), ex);
             }
-        });
+        }, IssueType.PLAYER_ISSUES);
     }
 }

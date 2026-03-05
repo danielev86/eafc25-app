@@ -6,17 +6,17 @@ import java.util.Map;
 
 public class IssueRow {
 
-    private final IssueTable table;
+    private final IssueType table;
     private final int id;
     private final Map<String, Object> columns;
 
-    public IssueRow(IssueTable table, int id, Map<String, Object> columns) {
+    public IssueRow(IssueType table, int id, Map<String, Object> columns) {
         this.table = table;
         this.id = id;
         this.columns = Collections.unmodifiableMap(new LinkedHashMap<>(columns));
     }
 
-    public IssueTable getTable() {
+    public IssueType getTable() {
         return table;
     }
 

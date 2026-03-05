@@ -1,6 +1,6 @@
 package com.redcatdev86.ui.view;
 
-import com.redcatdev86.backend.model.IssueTable;
+import com.redcatdev86.backend.model.IssueType;
 import com.redcatdev86.service.IssueService;
 import com.redcatdev86.ui.ResettableView;
 import javafx.geometry.Insets;
@@ -12,7 +12,7 @@ public class AddIssueView extends VBox implements ResettableView {
 
     private final IssueService issueService;
 
-    private final ComboBox<IssueTable> tableCombo = new ComboBox<>();
+    private final ComboBox<IssueType> tableCombo = new ComboBox<>();
     private final TextField typeField = new TextField();
     private final TextArea descArea = new TextArea();
     private final Spinner<Integer> qtySpinner = new Spinner<>(1, 200, 1);
@@ -32,10 +32,10 @@ public class AddIssueView extends VBox implements ResettableView {
         title.getStyleClass().add("page-title");
 
         tableCombo.getItems().addAll(
-                IssueTable.PLAYER_ISSUES,
-                IssueTable.TEAM_ISSUES,
-                IssueTable.MARKET_ISSUES,
-                IssueTable.MANAGER_ISSUES
+                IssueType.PLAYER_ISSUES,
+                IssueType.TEAM_ISSUES,
+                IssueType.MARKET_ISSUES,
+                IssueType.MANAGER_ISSUES
         );
 
         typeField.setPromptText("issue_type (es. Infortunio improvviso)");
@@ -82,7 +82,7 @@ public class AddIssueView extends VBox implements ResettableView {
     }
 
     private void onSave() {
-        IssueTable table = tableCombo.getValue();
+        IssueType table = tableCombo.getValue();
         String type = typeField.getText() == null ? "" : typeField.getText().trim();
         String desc = descArea.getText() == null ? "" : descArea.getText().trim();
         int qty = qtySpinner.getValue();
@@ -112,7 +112,7 @@ public class AddIssueView extends VBox implements ResettableView {
 
     @Override
     public void resetView() {
-        tableCombo.getSelectionModel().select(IssueTable.PLAYER_ISSUES);
+        tableCombo.getSelectionModel().select(IssueType.PLAYER_ISSUES);
         typeField.setText("");
         descArea.setText("");
         qtySpinner.getValueFactory().setValue(1);

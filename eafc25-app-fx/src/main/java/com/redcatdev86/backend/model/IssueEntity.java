@@ -3,19 +3,19 @@ package com.redcatdev86.backend.model;
 
 public class IssueEntity {
 
-    private final IssueTable table;
+    private final IssueType table;
     private final int id;
     private final String issueType;
     private final String issueDescription;
 
-    public IssueEntity(IssueTable table, int id, String issueType, String issueDescription) {
+    public IssueEntity(IssueType table, int id, String issueType, String issueDescription) {
         this.table = table;
         this.id = id;
         this.issueType = issueType;
         this.issueDescription = issueDescription;
     }
 
-    public IssueTable getTable() {
+    public IssueType getTable() {
         return table;
     }
 

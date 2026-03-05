@@ -23,7 +23,7 @@ public class MainView extends BorderPane {
     // invece di Node cache -> factory che crea una view nuova ogni volta
     private final Map<Views, Supplier<Node>> viewFactories = new EnumMap<>(Views.class);
 
-    public MainView(IssueService issueService, RandomIssueService randomIssueService) {
+    public MainView(IssueService issueService) {
         getStyleClass().add("app-root");
 
         VBox top = new VBox(10);
@@ -59,10 +59,10 @@ public class MainView extends BorderPane {
 
         // factories (NUOVA view ogni volta)
         viewFactories.put(Views.HOME, HomeView::new);
-        viewFactories.put(Views.PLAYER, () -> new PlayerIssueView(issueService, randomIssueService));
-        viewFactories.put(Views.TEAM, () -> new TeamIssueView(issueService, randomIssueService));
-        viewFactories.put(Views.MARKET, () -> new MarketIssueView(issueService, randomIssueService));
-        viewFactories.put(Views.MANAGER, () -> new ManagerIssueView(issueService, randomIssueService));
+        viewFactories.put(Views.PLAYER, () -> new PlayerIssueView(issueService));
+        viewFactories.put(Views.TEAM, () -> new TeamIssueView(issueService));
+        viewFactories.put(Views.MARKET, () -> new MarketIssueView(issueService));
+        viewFactories.put(Views.MANAGER, () -> new ManagerIssueView(issueService));
         viewFactories.put(Views.FORMATION, () -> new FormationView());
         viewFactories.put(Views.ADD_ISSUE, () -> new AddIssueView(issueService));
 

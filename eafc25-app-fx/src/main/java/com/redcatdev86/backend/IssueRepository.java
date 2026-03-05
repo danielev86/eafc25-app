@@ -1,7 +1,7 @@
 package com.redcatdev86.backend;
 
 import com.redcatdev86.backend.model.IssueEntity;
-import com.redcatdev86.backend.model.IssueTable;
+import com.redcatdev86.backend.model.IssueType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,7 +17,7 @@ public class IssueRepository {
         this.database = database;
     }
 
-    public int getMaxId(IssueTable table) throws SQLException {
+    public int getMaxId(IssueType table) throws SQLException {
         String sql = "SELECT MAX(id) AS max_id FROM " + table.tableName();
         try (Connection c = database.openConnection();
              PreparedStatement ps = c.prepareStatement(sql);
@@ -28,7 +28,7 @@ public class IssueRepository {
         }
     }
 
-    public Optional<IssueEntity> findById(IssueTable table, int id) throws SQLException {
+    public Optional<IssueEntity> findById(IssueType table, int id) throws SQLException {
         String sql = "SELECT id, issue_type, issue_description FROM " + table.tableName() + " WHERE id = ?";
         try (Connection c = database.openConnection();
              PreparedStatement ps = c.prepareStatement(sql)) {
@@ -47,7 +47,7 @@ public class IssueRepository {
         }
     }
 
-    public int insertIssueWithNextId(IssueTable table, String issueType, String issueDescription) throws SQLException {
+    public int insertIssueWithNextId(IssueType table, String issueType, String issueDescription) throws SQLException {
         // 1) max id
         int nextId = getMaxId(table) + 1;
 
@@ -69,7 +69,7 @@ public class IssueRepository {
      * Inserisce N righe identiche, con ID sequenziali (max+1 ... max+N).
      * Ritorna l'ultimo ID inserito.
      */
-    public int insertManyIssuesWithNextIds(IssueTable table, String issueType, String issueDescription, int quantity) throws SQLException {
+    public int insertManyIssuesWithNextIds(IssueType table, String issueType, String issueDescription, int quantity) throws SQLException {
         if (quantity <= 0) return 0;
 
         int startId = getMaxId(table) + 1;

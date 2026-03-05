@@ -1,5 +1,8 @@
 package com.redcatdev86.ui.view;
 
+import com.redcatdev86.backend.model.IssueType;
+import com.redcatdev86.config.AppConfig;
+import com.redcatdev86.service.RandomIssueService;
 import com.redcatdev86.ui.ResettableView;
 import com.redcatdev86.ui.bean.IssueBean;
 import javafx.geometry.Insets;
@@ -58,21 +61,25 @@ public abstract class IssuePageBase extends VBox implements ResettableView {
         resultExtra.setText("");
     }
 
-    protected void bindGenerate(Supplier<Optional<IssueBean>> supplier) {
+    protected void bindGenerate(Supplier<Optional<IssueBean>> supplier, IssueType issueType) {
         generate.setOnAction(e -> {
             try {
                 Optional<IssueBean> opt = supplier.get();
                 if (opt.isEmpty()) {
                     resultType.setText("NESSUN IMPREVISTO");
                     resultDesc.setText("");
-                    // resultExtra lo gestiscono le view (es. player #)
+                    resultExtra.setText("");
                     return;
                 }
 
                 IssueBean bean = opt.get();
                 resultType.setText(bean.getType() == null ? "" : bean.getType().toUpperCase());
                 resultDesc.setText(bean.getDescription() == null ? "" : bean.getDescription());
-                resultExtra.setText(buildExtra(bean));
+                String extraIssueText = "";
+                if (IssueType.PLAYER_ISSUES.equals(issueType)){
+                    extraIssueText = buildExtra(bean);
+                }
+                resultExtra.setText(extraIssueText);
 
             } catch (Exception ex) {
                 resultType.setText("ERRORE");
@@ -83,6 +90,7 @@ public abstract class IssuePageBase extends VBox implements ResettableView {
     }
 
     protected String buildExtra(IssueBean bean) {
-        return "ID: " + bean.getId() + " • " + bean.getCategory();
+        RandomIssueService randomIssueService = new RandomIssueService();
+        return  bean.getCategory() + ": " + randomIssueService.generateRandomInt(11 + AppConfig.get().getMaxBenchPlayers());
     }
 }

@@ -18,9 +18,7 @@ public class App extends Application {
         var db = Database.fromInstalledDb();
         var repo = new IssueRepository(db);
         var issueService = new IssueService(repo);
-        var randomService = new RandomIssueService(issueService);
-
-        var root = new MainView(issueService, randomService);
+        var root = new MainView(issueService);
 
         var scene = new Scene(root, 1100, 900);
         scene.getStylesheets().add(getClass().getResource("/ui/app.css").toExternalForm());
