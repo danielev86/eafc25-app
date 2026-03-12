@@ -5,7 +5,7 @@
 
   <groupId>com.redcatdev86</groupId>
   <artifactId>eafc25-app-fx</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
 
   <properties>
     <maven.compiler.release>17</maven.compiler.release>

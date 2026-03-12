@@ -23,6 +23,7 @@ public class NavBar extends HBox {
         addNavButton("MARKET", Views.MARKET, onNavigate);
         addNavButton("MANAGER", Views.MANAGER, onNavigate);
         addNavButton("FORMATION", Views.FORMATION, onNavigate);
+        addNavButton("FIFA 16 LEAGUE", Views.FIFA16LEAGUE, onNavigate);
         addNavButton("ADD ISSUE", Views.ADD_ISSUE, onNavigate);
         setActive(Views.HOME);
     }

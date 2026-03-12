@@ -64,6 +64,7 @@ public class MainView extends BorderPane {
         viewFactories.put(Views.MARKET, () -> new MarketIssueView(issueService));
         viewFactories.put(Views.MANAGER, () -> new ManagerIssueView(issueService));
         viewFactories.put(Views.FORMATION, () -> new FormationView());
+        viewFactories.put(Views.FIFA16LEAGUE, () -> new Fifa16LeaguesView());
         viewFactories.put(Views.ADD_ISSUE, () -> new AddIssueView(issueService));
 
         navigate(Views.HOME);
