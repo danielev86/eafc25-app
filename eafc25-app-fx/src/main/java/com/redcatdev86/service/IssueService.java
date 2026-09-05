@@ -9,7 +9,6 @@ import com.redcatdev86.ui.bean.IssueBean;
 import java.sql.SQLException;
 import java.util.Locale;
 import java.util.Optional;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class IssueService {
 
@@ -40,6 +39,29 @@ public class IssueService {
         if (max <= 0) return Optional.empty();
         int id = RandomIssueService.generateRandomInt(max);
         return getIssueById(table, id);
+    }
+
+    public Optional<IssueBean> randomMatchTimeIssue(){
+        int id = RandomIssueService.generateRandomInt(3);
+        IssueBean  issueBean = null;
+        switch (id){
+            case 1:
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 1 , "Partita Completa", "Gioca tutta la partita");
+                break;
+            case 2:
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 2 , "Secondo tempo", "Simula tutto il primo tempo ed entra in campo nel secondo tempo");
+                break;
+            case 3:
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 3 , "Azioni salienti", "Gioca solo le azioni salienti");
+                break;
+            case 4:
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 1 , "Simulazione Completa", "Simula tutta la partita");
+                break;
+            default:
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 2 , "Secondo tempo", "Simula tutto il primo tempo ed entra in campo nel secondo tempo");
+                break;
+        }
+        return Optional.of(issueBean);
     }
 
     /** Replica la logica Electron solo per player: se id random è pari => nessuna issue */

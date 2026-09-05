@@ -16,12 +16,12 @@ public class NavBar extends HBox {
         getStyleClass().add("nav");
         setSpacing(10);
         setPadding(new Insets(10, 20, 14, 20));
-
         addNavButton("HOME", Views.HOME, onNavigate);
         addNavButton("PLAYER", Views.PLAYER, onNavigate);
         addNavButton("TEAM", Views.TEAM, onNavigate);
         addNavButton("MARKET", Views.MARKET, onNavigate);
         addNavButton("MANAGER", Views.MANAGER, onNavigate);
+        addNavButton("MATCH TIME", Views.MATCH_TIME, onNavigate);
         addNavButton("FORMATION", Views.FORMATION, onNavigate);
         addNavButton("FIFA 16 LEAGUE", Views.FIFA16LEAGUE, onNavigate);
         addNavButton("ADD ISSUE", Views.ADD_ISSUE, onNavigate);

@@ -8,6 +8,7 @@ public enum Views {
     MANAGER,
     SLIDER,
     FORMATION,
+    MATCH_TIME,
     FIFA16LEAGUE,
     ADD_ISSUE
 }

@@ -4,7 +4,8 @@ public enum IssueType {
     PLAYER_ISSUES("player_issues"),
     TEAM_ISSUES("team_issues"),
     MANAGER_ISSUES("manager_issues"),
-    MARKET_ISSUES("market_issues");
+    MARKET_ISSUES("market_issues"),
+    MATCH_TIME_ISSUES("match_time_issues"),;
 
     private final String tableName;
 
