@@ -42,7 +42,7 @@ public class IssueService {
     }
 
     public Optional<IssueBean> randomMatchTimeIssue(){
-        int id = RandomIssueService.generateRandomInt(3);
+        int id = RandomIssueService.generateRandomInt(4);
         IssueBean  issueBean = null;
         switch (id){
             case 1:
