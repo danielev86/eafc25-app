@@ -55,10 +55,10 @@ public class IssueService {
                 issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 3 , "Primo tempo", "Entra in campo e gioca tutto il primo tempo. Simula il secondo tempo");
                 break;
             case 4:
-                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 1 , "Simulazione Completa", "Simula tutta la partita");
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 4 , "Simulazione Completa", "Simula tutta la partita");
                 break;
             default:
-                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 2 , "Secondo tempo", "Simula tutto il primo tempo ed entra in campo nel secondo tempo");
+                issueBean = new IssueBean(IssueType.MATCH_TIME_ISSUES.name(), 1 , "Partita Completa", "Gioca tutta la partita");
                 break;
         }
         return Optional.of(issueBean);
